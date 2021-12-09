@@ -1,5 +1,5 @@
 build:
-	env C_INCLUDE_PATH=/usr/local/include dune build -j jobs -p name @install
+	env C_INCLUDE_PATH=/usr/local/include dune build -j auto @install
 
 test:
-	dune build runtest -p name -j jobs {with test}
+	dune build runtest
