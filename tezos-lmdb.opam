@@ -9,8 +9,7 @@ homepage: "https://github.com/vbmithr/ocaml-lmdb"
 bug-reports: "https://github.com/vbmithr/ocaml-lmdb/issues"
 dev-repo: "git://github.com/Vertalo/ocaml-lmdb"
 build: [
-  ["dune" "build" "-j" jobs "-p" name "@install"]
-  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+  ["gmake" "build"]
 ]
 depends: [
   "dune" {build & >= "1.7"}
