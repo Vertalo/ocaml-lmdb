@@ -9,7 +9,7 @@ homepage: "https://github.com/vbmithr/ocaml-lmdb"
 bug-reports: "https://github.com/vbmithr/ocaml-lmdb/issues"
 dev-repo: "git://github.com/Vertalo/ocaml-lmdb"
 build: [
-  ["dune" "build" "-j" jobs "-p" name "@install"]
+  ["C_INCLUDE_PATH=/usr/local/include" "dune" "build" "-j" jobs "-p" name "@install"]
   ["dune" "runtest" "-p" name "-j" jobs] {with-test}
 ]
 depends: [
